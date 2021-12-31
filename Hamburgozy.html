@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="Hamburgozy.css">
+        <script src="Hamburgozy.js"></script>
+        <script>window.onload = function initLoad() {
+            renderBurger();
+        }</script>
+    </head>
+    <body>
+        <div class='myGrid'>
+            <div class='header'>
+              <h1 id='title'>Hamburgozy: Home of the world-famous Hamburgozy™</h1>
+            </div>
+            <div class='leftSidebar'>
+                <table>
+                    <tr>
+                        <td>
+                    <span class='buttonsSpan'>
+                        <button class='button' onclick="editTopping('patty', false)">-</button>
+                        <label class='toppingLabel'>Patties</label>
+                        <button class='button' onclick="editTopping('patty', true)">+</button>
+                    </span>
+                    </td>
+                    <td>
+                    <label class='toppingCount' id='patty'>1</label>
+                    </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class='buttonsSpan'>
+                        <button class='button' onclick="editTopping('cheese', false)">-</button>
+                        <label class='toppingLabel'>Cheese</label>
+                        <button class='button' onclick="editTopping('cheese', true)">+</button>
+                    </span>
+                </td>
+                <td>
+                    <label class='toppingCount' id='cheese'>0</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class='buttonsSpan'>
+                        <button class='button' onclick="editTopping('lettuce', false)">-</button>
+                        <label class='toppingLabel'>Lettuce</label>
+                        <button class='button' onclick="editTopping('lettuce', true)">+</button>
+                    </span>
+                    </td>
+                    <td>
+                    <label class='toppingCount' id='lettuce'>0</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class='buttonsSpan'>
+                        <button class='button' onclick="editTopping('tomatoes', false)">-</button>
+                        <label class='toppingLabel'>Tomatoes</label>
+                        <button class='button' onclick="editTopping('tomatoes', true)">+</button>
+                    </span>
+                    </td>
+                    <td>
+                    <label class='toppingCount' id='tomatoes'>0</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class='buttonsSpan'>
+                        <button class='button' onclick="editTopping('onions', false)">-</button>
+                        <label class='toppingLabel'>Onions</label>
+                        <button class='button' onclick="editTopping('onions', true)">+</button>
+                    </span>
+                    </td>
+                    <td>
+                    <label class='toppingCount' id='onions'>0</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class='buttonsSpan'>
+                        <button class='button' onclick="editTopping('pickles', false)">-</button>
+                        <label class='toppingLabel'>Pickles</label>
+                        <button class='button' onclick="editTopping('pickles', true)">+</button>
+                    </span>
+                    </td>
+                    <td>
+                    <label class='toppingCount' id='pickles'>0</label>
+                    </td>
+            </tr>
+            </div>
+        </table>
+            </div>
+            <div class='body'>
+              <div id='burger'>
+              burger
+            </div>
+            </div>
+          </div>
+    </body>
+</html>

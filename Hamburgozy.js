@@ -7,6 +7,8 @@ const hamburgozy = {
     pickles: 0
 }
 
+// Returns a structured, complete set of a full burger, 
+// Based on the current topping counts
 function getBurgerLayers(){
     let layers = {
         under_bun: 1,
@@ -22,9 +24,9 @@ function getBurgerLayers(){
     return layers;
 }
 
+// Renders the current burger's graphics
 function renderBurger(){
     let currentLayers = getBurgerLayers();
-
 
     let innerVal = '';
     
@@ -37,22 +39,19 @@ function renderBurger(){
     innerVal = appendToppingLayers('patty', currentLayers.patty, innerVal);
     innerVal = appendToppingLayers('under_bun', 1, innerVal);
 
-    console.log('Setting innerHTML:\n' + innerVal);
     document.getElementById('burger').innerHTML = '' + innerVal;
 }
 
 // Adds an HTML representation of an Hamburgozy layer to a string
 function appendToppingLayers(toppingName, toppingCount, existingString){
-    console.log('Running on: \n' + existingString);
-    let layerTemplate = '<div class=\'burgerLayer\' id=\'LAYER_ID\'></div>';
-    let picLayerTemplate = '<img class="burgerLayer" src="assets\\self\\LAYER_ID.png" alt="LAYER_ID">';
-    var toppingLayer = picLayerTemplate.replace('LAYER_ID', toppingName);
-    var newLine = '</br>';
-    for(var toppingI = 0; toppingI < toppingCount; toppingI++){
-        
-        existingString = existingString.concat(toppingLayer).concat(newLine);
+    if (toppingCount > 0){
+        let picLayerTemplate = '<img class="burgerLayer" src="assets\\self\\LAYER_ID.png" alt="LAYER_ID">';
+        var toppingLayer = picLayerTemplate.replace('LAYER_ID', toppingName);
+        var newLine = '</br>';
+        for(var toppingI = 0; toppingI < toppingCount; toppingI++){
+            existingString = existingString.concat(toppingLayer).concat(newLine);
+        }
     }
-    console.log('Returning: \n' + existingString);
     return existingString;
 }
 
